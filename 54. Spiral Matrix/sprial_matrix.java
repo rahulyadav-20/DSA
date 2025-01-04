@@ -5,7 +5,8 @@ import java.util.List;
 class Solution {
 
     public List<Integer> spiralOrder(int[][] matrix) {
-        List<Integer> ans = new ArrayList<Integer>();
+        List<Integer> ans;
+        ans = new ArrayList<>();
 
         int top = 0; //row
         int right = matrix[0].length - 1; //col

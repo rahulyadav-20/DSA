@@ -1,7 +1,7 @@
 from typing import List
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        ans=[];
+        ans=[]
 
         top=0
         right=len(matrix[0])-1

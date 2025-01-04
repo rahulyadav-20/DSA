@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         ans=[];
@@ -23,6 +24,15 @@ class Solution:
                     ans.append(matrix[i][left])
                 left+=1
         return ans
+    
+if __name__ == "__main__":
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+    sol = Solution()
+    print(sol.spiralOrder(matrix))
 
 
         

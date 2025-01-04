@@ -38,7 +38,6 @@ class Solution {
     }
 }
 
-
 public class sprial_matrix {
 
     public static void main(String[] args) {

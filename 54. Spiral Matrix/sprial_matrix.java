@@ -43,7 +43,3 @@ public static void main(String[] args) {
     List<Integer> result = solution.spiralOrder(matrix);
     System.out.println(result);
 }
-
-public Array<Integer> print(int [][] arr){
-
-}

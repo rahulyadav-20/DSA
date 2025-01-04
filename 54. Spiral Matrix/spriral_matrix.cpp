@@ -33,3 +33,17 @@ public:
         return ans;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<vector<int>> matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    vector<int> result = sol.spiralOrder(matrix);
+    for (int num : result) {
+        cout << num << " ";
+    }
+    return 0;
+}

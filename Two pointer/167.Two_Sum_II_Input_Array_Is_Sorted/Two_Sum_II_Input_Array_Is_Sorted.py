@@ -3,7 +3,6 @@ from typing import List
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         ans=[]
-
         start=0
         end=len(numbers)-1
 

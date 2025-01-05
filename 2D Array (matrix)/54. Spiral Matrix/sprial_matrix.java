@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,22 +14,22 @@ class Solution {
         int left = 0; //col
 
         while (top <= bottom && left <= right) {
-            for (int i = top; i <= right; i++) {
+            for (int i = top; i <= right; i++) { // Traverse from left to right on the top row
                 ans.add(matrix[top][i]);
             }
             top++;
-            for (int i = top; i <= bottom; i++) {
+            for (int i = top; i <= bottom; i++) { // Traverse from top to bottom on the rightmost column
                 ans.add(matrix[i][right]);
             }
             right--;
             if (top <= bottom) {
-                for (int i = right; i >= left; i--) {
+                for (int i = right; i >= left; i--) { // Traverse from right to left on the bottom row
                     ans.add(matrix[bottom][i]);
                 }
                 bottom--;
             }
             if (left <= right) {
-                for (int i = bottom; i >= top; i--) {
+                for (int i = bottom; i >= top; i--) { // Traverse from bottom to top on the leftmost column
                     ans.add(matrix[i][left]);
                 }
                 left++;

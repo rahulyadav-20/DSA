@@ -10,12 +10,12 @@ public:
         int end=numbers.size()-1;
 
         while(start<=end){
-            if(numbers[start]+numbers[end]==target){
-                ans.push_back(start+1);
+            if(numbers[start]+numbers[end]==target){  //If the sum is equal to the target, return the indices
+                ans.push_back(start+1); 
                 ans.push_back(end+1);
                 return ans;
             }
-            else if(numbers[start]+numbers[end]>target){
+            else if(numbers[start]+numbers[end]>target){ //If the sum is greater than the target, decrement the end pointer
                 end--;
             }else{
                 start++;

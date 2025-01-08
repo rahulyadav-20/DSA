@@ -1,5 +1,5 @@
 import pandas as pd
-import pandasql as psql
+
 
 # Create a DataFrame
 data = {

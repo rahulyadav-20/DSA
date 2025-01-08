@@ -18,8 +18,11 @@ public class arrayList {
         System.out.println(list);               // Output: [Apple, Banana, Cherry, Date]
 
         String fruit = list.get(1);             // Get element at index
+        System.out.println(fruit);               // Output: Banana    
         int index = list.indexOf("Cherry");     // Get the first index of an element
+        System.out.println(index);               // Output: 2   
         boolean exists = list.contains("Date"); // Check if list contains an element
+        System.out.println(exists);              // Output: true
 
         list.set(1, "Blueberry");               // Replace element at index 1
 

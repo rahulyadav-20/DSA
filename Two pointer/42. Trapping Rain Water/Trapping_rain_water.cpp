@@ -6,6 +6,9 @@ using namespace std;
 class Solution
 {
 public:
+    // Time complexity: O(n)
+    // Space complexity: O(1)
+    // Two pointer approach
     int trap(vector<int> &height)
     {
         int water = 0;

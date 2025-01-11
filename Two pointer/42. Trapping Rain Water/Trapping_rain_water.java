@@ -11,24 +11,16 @@ class Solution {
         ArrayList<Integer> rightMax = new ArrayList<>();
         ArrayList<Integer> leftMax = new ArrayList<>();
         int maxi = -1;
-        for (int i = 0; i < height.length; i++) {  //storing the right max
-            if (height[i] > maxi) {
-                maxi = height[i];
-                rightMax.add(height[i]);
-            } else {
-                rightMax.add(maxi);
-            }
+        for (int i = 0; i < height.length; i++) {  //storing the left max
+            maxi = Math.max(maxi, height[i]);
+            leftMax.add(maxi);
         }
         maxi = -1;
-        for (int i = height.length - 1; i >= 0; i--) { //storing the left max
-            if (height[i] > maxi) {
-                maxi = height[i];
-                leftMax.add(height[i]);
-            } else {
-                leftMax.add(maxi);
-            }
+        for (int i = height.length - 1; i >= 0; i--) { //storing the right max
+            maxi = Math.max(maxi, height[i]);
+            rightMax.add(maxi);
         }
-        Collections.reverse(leftMax);
+        Collections.reverse(rightMax);
         for (int i = 0; i < height.length; i++) {
             int diff = Math.min(rightMax.get(i), leftMax.get(i)) - height[i]; //taking the minimum of the two
             if (diff > 0) {

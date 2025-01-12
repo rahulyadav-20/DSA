@@ -6,6 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.ListIterator;
 
+@SuppressWarnings("unused")
 public class arrayList {
 
     public static void main(String[] args) {
@@ -70,6 +71,10 @@ public class arrayList {
 
         //Converting to Other Data Structures
         Object[] array = list.toArray();        // Convert to array
+        for (Object obj : array) {
+            System.out.println(obj);            // Read from array
+        }
+
         List<String> newList = new ArrayList<>(list); // Clone list
 
         //Stream API (Java 8+)

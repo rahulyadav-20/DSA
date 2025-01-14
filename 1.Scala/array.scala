@@ -75,6 +75,8 @@ object array{
 
         val zipped = arr.zip(arrWithRange)          // Zip two arrays
 
+        val indexedElements = elements.zipWithIndex //Zip elements with their indices
+
         val (first, second) = zipped.unzip          // Unzip an array of pairs
 
         val sumOfPairs = zipped.map { case (a, b) => a + b } // Sum of pairs
@@ -97,22 +99,50 @@ object array{
 
         val matrix = Array.ofDim[Int](3, 3)         // 3x3 matrix
         matrix(0)(0) = 1                            // Set value in matrix
-        
 
+        // Print the 2D array
+        for (row <- matrix) {
+            println(row.mkString(" "))
+        }
 
+        val element = matrix(1)(2)                  // Access element at row 1, column 2
 
+        val row = matrix(1)                         // Access row at index 1
 
+        val col = matrix.map(_(2))                  // Access column at index 2
 
+        val flat = matrix.flatten                    // Flatten the 2D array
 
+        val transposed = matrix.transpose           // Transpose the 2D array
 
+        val sumRows = matrix.map(_.sum)              // Sum of each row
 
+        val sumCols = matrix.transpose.map(_.sum)    // Sum of each column
 
+        val distinct = arr.distinct                  // Remove duplicates
 
+        val (even, odd) = arr.partition(_ % 2 == 0)  // Partition into even and odd numbers
 
+        val grouped = arr.grouped(2).toArray         // Group elements in an array in groups of 2
 
+        val sliding = arr.sliding(2).toArray         // Generate sliding windows of size 2
 
+        val zipped = arr.zipWithIndex                // Zip elements with their indices
 
-        
+        val (first, second) = zipped.unzip           // Unzip an array of pairs
+
+        val sumOfPairs = zipped.map { case (a, b) => a + b } // Sum of pairs
+
+        val multiplied = arr.map(_ * 2)              // Multiply each element by 2
+
+        val squared = arr.map(n => n * n)            // Square each element
+
+        val sumOfSquares = arr.map(n => n * n).sum   // Sum of squares
+
+        val sumOfEven = arr.filter(_ % 2 == 0).sum   // Sum of even numbers
+
+        val sumOfOdd = arr.filter(_ % 2 != 0).sum    // Sum of odd numbers
+
 
 
     }

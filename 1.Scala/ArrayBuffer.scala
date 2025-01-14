@@ -122,26 +122,7 @@ object ArrayBuffer{
 
         val (before, atAndAfter) = buffer.partition(_ < 4) // Partition the buffer before and at/after the first element less than 4
 
-
-
-
-
-
-
-
-
-
-
-
-
         
-        
-
-
-
-        
-
-
 
     }
 }

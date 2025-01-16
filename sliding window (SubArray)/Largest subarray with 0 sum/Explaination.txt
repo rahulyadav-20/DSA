@@ -1,0 +1,52 @@
+Given an array arr containing both positive and negative integers, the task is to compute the length of the largest subarray that has a sum of 0.
+
+Examples:
+
+Input: arr[] = [15, -2, 2, -8, 1, 7, 10, 23]
+Output: 5
+Explanation: The largest subarray with a sum of 0 is [-2, 2, -8, 1, 7].
+Input: arr[] = [2, 10, 4]
+Output: 0
+Explanation: There is no subarray with a sum of 0.
+Input: arr[] = [1, 0, -4, 3, 1, 0]
+Output: 5
+Explanation: The subarray is [0, -4, 3, 1, 0].
+Constraints:
+1 ≤ arr.size() ≤ 106
+−103 ≤ arr[i] ≤ 103, for each valid i
+
+Dry Run:
+
+Consider the input array arr[] = [15, -2, 2, -8, 1, 7, 10, 23]
+
+
+Step-by-step process:
+1. Initialize sum = 0 and create an empty hash map.
+2. Traverse the array from the start:
+    - At index 0, element = 15:
+      - Update sum = 15
+      - Since sum is not 0 and not in the hash map, add (15, 0) to the hash map.
+    - At index 1, element = -2:
+      - Update sum = 13
+      - Since sum is not 0 and not in the hash map, add (13, 1) to the hash map.
+    - At index 2, element = 2:
+      - Update sum = 15
+      - Since sum is already in the hash map at index 0, calculate subarray length = 2 - 0 = 2.
+    - At index 3, element = -8:
+      - Update sum = 7
+      - Since sum is not 0 and not in the hash map, add (7, 3) to the hash map.
+    - At index 4, element = 1:
+      - Update sum = 8
+      - Since sum is not 0 and not in the hash map, add (8, 4) to the hash map.
+    - At index 5, element = 7:
+      - Update sum = 15
+      - Since sum is already in the hash map at index 0, calculate subarray length = 5 - 0 = 5.
+    - At index 6, element = 10:
+      - Update sum = 25
+      - Since sum is not 0 and not in the hash map, add (25, 6) to the hash map.
+    - At index 7, element = 23:
+      - Update sum = 48
+      - Since sum is not 0 and not in the hash map, add (48, 7) to the hash map.
+3. The maximum subarray length with sum 0 found is 5.
+
+Output: 5

@@ -1,0 +1,58 @@
+Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+
+You must not use any built-in exponent function or operator.
+
+For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+ 
+
+Example 1:
+
+Input: x = 4
+Output: 2
+Explanation: The square root of 4 is 2, so we return 2.
+Example 2:
+
+Input: x = 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
+ 
+
+Constraints:
+
+0 <= x <= 231 - 1
+
+Dry run for x = 100:
+
+Start:
+- Initialize start to 0 and end to 100.
+
+Iteration 1:
+- Calculate mid = (0 + 100) // 2 = 50.
+- Since 50 * 50 = 2500 is greater than 100, update end to 49.
+
+Iteration 2:
+- Calculate mid = (0 + 49) // 2 = 24.
+- Since 24 * 24 = 576 is greater than 100, update end to 23.
+
+Iteration 3:
+- Calculate mid = (0 + 23) // 2 = 11.
+- Since 11 * 11 = 121 is greater than 100, update end to 10.
+
+Iteration 4:
+- Calculate mid = (0 + 10) // 2 = 5.
+- Since 5 * 5 = 25 is less than 100, update start to 6.
+
+Iteration 5:
+- Calculate mid = (6 + 10) // 2 = 8.
+- Since 8 * 8 = 64 is less than 100, update start to 9.
+
+Iteration 6:
+- Calculate mid = (9 + 10) // 2 = 9.
+- Since 9 * 9 = 81 is less than 100, update start to 10.
+
+Iteration 7:
+- Calculate mid = (10 + 10) // 2 = 10.
+- Since 10 * 10 = 100 is equal to 100, return 10.
+
+End:
+- The square root of 100 is 10.
